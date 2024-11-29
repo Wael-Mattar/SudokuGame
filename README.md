@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Sudoku Solver Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Sudoku game with an interactive board where users can:
+- Generate Sudoku puzzles of varying difficulty (Easy, Medium, Hard).
+- Solve the puzzles manually or by using the "Solve" button.
+- Get hints for specific cells.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Sudoku Board**: A dynamic board where you can input values into cells.
+- **Generate Puzzle**: A new puzzle can be generated with varying levels of difficulty.
+- **Solve Puzzle**: You can solve the puzzle automatically by clicking the "Solve" button.
+- **Hint**: Get a hint for solving the puzzle.
 
-### `npm start`
+## Work In Progress: Image Upload and OCR Solution
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+One of the key features I am working on is the ability to upload a Sudoku image, extract the board data using Optical Character Recognition (OCR), and solve the board dynamically. Currently, this feature is **not yet working**. However, I am in the process of building a **Python API** to solve this, which is not yet finished.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Approach Used
 
-### `npm test`
+To implement this, I have integrated the following:
+- **Optical Character Recognition (OCR)**: Using tools like `Tesseract` to process the uploaded Sudoku image and extract the digits.
+- **Image Preprocessing**: Using `OpenCV` for image preprocessing to improve OCR accuracy.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can see the current approach in the code, but due to various challenges with OCR accuracy and image processing, it has not been fully implemented yet.
 
-### `npm run build`
+### Future Work
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Complete the OCR and image preprocessing pipeline.
+- Finish the Python API for solving Sudoku from an image.
+- Improve the accuracy of OCR to handle various fonts and image qualities.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the game locally:
 
-### `npm run eject`
+1. Clone this repository:
+2. npm install
+3. npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
